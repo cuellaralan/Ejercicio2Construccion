@@ -27,6 +27,38 @@
 				echo "<H1>"."$alambre"."mts de alambre"."<H1>";
 			}
 
+			if (isset($_POST['Materiales']))
+			 {
+			 	
+
+			 	$largo=$_POST['Largo'];
+				$ancho=$_POST['Ancho'];
+
+				$area = $largo*$ancho;
+
+				$bolsasCemento = 2*$area;
+				$bolsasCal= 3*$area;
+
+				echo "<br>";
+				echo"Se necesitaran: <br>";
+				echo"<H1>"."$bolsasCemento"." bolsas de cemento y "."$bolsasCal"." bolsas de cal"."<H1>";
+			 }
+
+			 if(isset($_POST['Circulo']))
+			 {
+			 	$radio = $_POST['Radio'];
+
+			 	$area = M_PI*($radio*$radio) ;
+			 	$alambre=$area*3;
+
+			 	echo "<br>";
+			 	echo "Se necesitaran: <br>";
+			 	echo "<H1>"."$alambre"." metros de alambre"."<H1>";
+			 	
+
+
+			 }
+
 
 	 	?>
 
